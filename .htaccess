@@ -1,3 +1,6 @@
+# Disable Directory Browsing - Security > Settings > System Tweaks > Directory Browsing
+	Options -Indexes
+
 RewriteEngine on
 
 # Security related. Block browser access to log files
@@ -63,6 +66,137 @@ RewriteRule .* - [F,L]
 
 # To block IP addresses, see example format below. Add to list as needed:
 deny from 46.183.219.91
+
+# Ban Hosts
+	SetEnvIF REMOTE_ADDR "^91\.200\.12\.38$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.200\.12\.38$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.200\.12\.38$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.200\.12\.4$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.200\.12\.4$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.200\.12\.4$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^193\.201\.224\.106$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^193\.201\.224\.106$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^193\.201\.224\.106$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^185\.145\.128\.101$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^185\.145\.128\.101$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^185\.145\.128\.101$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.210\.145\.211$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.210\.145\.211$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.210\.145\.211$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.210\.145\.65$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.210\.145\.65$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.210\.145\.65$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.210\.145\.70$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.210\.145\.70$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.210\.145\.70$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^169\.51\.70\.218$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^169\.51\.70\.218$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^169\.51\.70\.218$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.189\.36\.202$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.189\.36\.202$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.189\.36\.202$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.210\.144\.131$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.210\.144\.131$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.210\.144\.131$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^173\.208\.218\.202$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^173\.208\.218\.202$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^173\.208\.218\.202$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^50\.77\.8\.169$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^50\.77\.8\.169$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^50\.77\.8\.169$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^181\.214\.87\.244$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^181\.214\.87\.244$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^181\.214\.87\.244$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^120\.78\.178\.26$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^120\.78\.178\.26$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^120\.78\.178\.26$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^212\.83\.188\.26$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^212\.83\.188\.26$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^212\.83\.188\.26$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^203\.24\.188\.159$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^203\.24\.188\.159$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^203\.24\.188\.159$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^62\.210\.178\.45$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^62\.210\.178\.45$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^62\.210\.178\.45$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^37\.252\.14\.50$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^37\.252\.14\.50$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^37\.252\.14\.50$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^193\.201\.224\.28$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^193\.201\.224\.28$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^193\.201\.224\.28$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^182\.92\.224\.62$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^182\.92\.224\.62$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^182\.92\.224\.62$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^52\.201\.220\.74$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^52\.201\.220\.74$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^52\.201\.220\.74$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^195\.154\.52\.152$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^195\.154\.52\.152$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^195\.154\.52\.152$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^91\.210\.145\.5$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^91\.210\.145\.5$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^91\.210\.145\.5$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^185\.153\.198\.235$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^185\.153\.198\.235$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^185\.153\.198\.235$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^52\.73\.26\.92$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^52\.73\.26\.92$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^52\.73\.26\.92$" DenyAccess
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+    # Filter Request Methods
+		RewriteCond %{REQUEST_METHOD} ^(TRACE|DELETE|TRACK) [NC]
+		RewriteRule ^.* - [F]
+
+		# Filter Suspicious Query Strings in the URL
+		RewriteCond %{QUERY_STRING} \.\.\/ [OR]
+		RewriteCond %{QUERY_STRING} \.(bash|git|hg|log|svn|swp|cvs) [NC,OR]
+		RewriteCond %{QUERY_STRING} etc/passwd [NC,OR]
+		RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
+		RewriteCond %{QUERY_STRING} ftp: [NC,OR]
+		RewriteCond %{QUERY_STRING} https?: [NC,OR]
+		RewriteCond %{QUERY_STRING} (<|%3C)script(>|%3E) [NC,OR]
+		RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [NC,OR]
+		RewriteCond %{QUERY_STRING} base64_decode\( [NC,OR]
+		RewriteCond %{QUERY_STRING} %24&x [NC,OR]
+		RewriteCond %{QUERY_STRING} 127\.0 [NC,OR]
+		RewriteCond %{QUERY_STRING} (globals|encode|localhost|loopback) [NC,OR]
+		RewriteCond %{QUERY_STRING} (request|concat|insert|union|declare) [NC,OR]
+		RewriteCond %{QUERY_STRING} %[01][0-9A-F] [NC]
+		RewriteCond %{QUERY_STRING} !^loggedout=true
+		RewriteCond %{QUERY_STRING} !^action=jetpack-sso
+		RewriteCond %{QUERY_STRING} !^action=rp
+		RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
+		RewriteCond %{HTTP_REFERER} !^http://maps\.googleapis\.com
+		RewriteRule ^.* - [F]
+	</IfModule>
 
 # End HackRepair.com Blacklist, http://pastebin.com/BPRv4TDd
 #
